@@ -10,16 +10,15 @@
 
 class Worker:
 
-    def __init__(self, name=0, surname=0, position=0, _income=0):
+    def __init__(self, name=0, surname=0, position=0, wage=0, bonus=0):
         self.name = name
         self.surname = surname
         self.position = position
-        self._income = _income
+        self._income = {"Wage": wage, "Bonus": bonus}
 
 
 class Position(Worker):
-    wage=0
-    bonus=0
+
 
     def get_full_name(self):
         self.name = input("Введите имя сотрудника: ")
