@@ -27,7 +27,7 @@ class Handle(Stationery):
         self.title = title
 
     def draw(self):
-        print(f'{self.title} начала рисовать')
+        print(f'{self.title} начал рисовать')
 
 
 class Pencil(Stationery):
@@ -36,7 +36,7 @@ class Pencil(Stationery):
         self.title = title
 
     def draw(self):
-        print(f'{self.title} начала рисовать')
+        print(f'{self.title} начал рисовать')
 
 
 pen1 = Pen()

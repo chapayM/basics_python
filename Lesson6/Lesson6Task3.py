@@ -23,7 +23,7 @@ class Position(Worker):
     def get_full_name(self):
         self.name = input("Введите имя сотрудника: ")
         self.surname = input('Введите фамилию сотрудника: ')
-        return self.name, self.surname
+        return print(f'{self.name} {self.surname}')
 
     def get_total_income(self):
         self.wage = float(input('Введите оклад: '))
