@@ -10,31 +10,30 @@
 
 class Worker:
 
-    def __init__(self, name=0, surname=0, position=0, wage=0, bonus=0):
-        self.name = name
-        self.surname = surname
-        self.position = position
+    def __init__(self, name="-", surname="-", position="-", wage=0, bonus=0):
+        self.name = input("Введите имя сотрудника: ")
+        self.surname = input("Введите фамилию сотрудника: ")
+        self.position = input("Введите должность сотрудника: ")
         self._income = {"Wage": wage, "Bonus": bonus}
 
 
 class Position(Worker):
 
-
     def get_full_name(self):
-        self.name = input("Введите имя сотрудника: ")
-        self.surname = input('Введите фамилию сотрудника: ')
-        return print(f'{self.name} {self.surname}')
+        # self.name = input("Введите имя сотрудника: ")
+        # self.surname = input('Введите фамилию сотрудника: ')
+        return f'{self.name} {self.surname}'
 
     def get_total_income(self):
         self.wage = float(input('Введите оклад: '))
         self.bonus = float(input('Введите премию: '))
         self._income = {"wage": self.wage, "bonus": self.bonus}
-        return self._income
+        return self.wage+self.bonus
 
 
 pos1 = Position()
 pos1.get_full_name()
-pos1.get_total_income()
+print(pos1.get_total_income())
 print(pos1.name)
 print(pos1.surname)
 print(pos1._income)
